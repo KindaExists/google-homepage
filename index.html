@@ -4,6 +4,50 @@
         <!-- Replace Icon Later with correct icon -->
         <link rel="icon" href="images/google-icon.png" type="image/png">
         <title>Google</title>
+
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .logo-container {
+                display: flex;
+                justify-content: center;
+            }
+
+            .logo-image {
+
+            }
+            .search-form {
+                max-width: 584px;
+                margin: 0 auto 0 auto;
+            }
+            .search-box {
+                border: 1px solid #dfe1e5;
+                height: 44px;
+                border-radius: 24px;
+
+            }
+            .search-box-area {
+                height: 100%;
+                padding: 5px 8px 0 14px;
+
+                display: flex;
+            }
+            .search-field {
+                outline: none;
+                border: none;
+                font-size: 14px;
+                height: 34px;
+                width: 100%;
+            }
+            .search-buttons-area {
+                padding-top: 10px;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
     </head>
     <body>
         <!--
@@ -16,7 +60,21 @@
 
         </nav>
         <main>
-            <img src="images/google_logo.png" alt="Google">
+            <div class="logo-container">
+            <img src="images/google_logo.png" alt="Google" class="logo-image">
+            </div>
+            <form class="search-form">
+                <div class="search-box">
+                    <div class="search-box-area">
+                        <input type="text" class="search-field">
+                    </div>
+                </div>
+
+                <div class="search-buttons-area">
+                    <button>A</button>
+                    <button>B</button>
+                </div>
+            </form>
         </main>
         <footer>
 

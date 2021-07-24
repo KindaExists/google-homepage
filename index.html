@@ -15,20 +15,39 @@
                 font-size: 14px;
                 font-family: arial, sans-serif;
                 color: #222;
+                white-space: nowrap;
             }
+
+            a {
+                text-decoration: none;
+            }
+
+
+
+            nav {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 6px 10px 6px 6px;
+                height: 48px;
+            }
+            .header-nav-list ul li {
+                font-size: 13px;
+            }
+            .header-nav-list ul li, .header-nav-list div {
+                padding-left: 15px;
+            }
+            .header-nav-list ul li a {
+                color: rgba(0, 0, 0, 0.87);
+            }
+
+
 
             main {
                 margin: auto;
                 text-align: center;
                 max-width: 600px;
             }
-
-            .box {
-                background-color: red;
-                height: 100%;
-                width: 100%;
-            }
-
 
             #search-form {
                 padding-top: 20px;
@@ -63,6 +82,32 @@
             }
 
 
+
+            footer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                padding: 0 20px;
+                background-color: #f2f2f2
+            }
+            .footer-nav {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+                justify-content: space-evenly;
+            }
+            footer ul li {
+                padding: 15px;
+            }
+            footer ul li a {
+                color: #70757a;
+            }
+
+
+
+
+
             .search-icon-small {
                 width: 20px;
                 height: 20px;
@@ -71,10 +116,12 @@
             .apps-icon-small {
                 width: 24px;
                 height: 24px;
+                padding: 12px;
             }
             .profile-small {
-                width: 30px;
-                height: 30px;
+                width: 32px;
+                height: 32px;
+                padding: 8px;
                 border-radius: 50%;
             }
 
@@ -87,13 +134,15 @@
         </style>
     </head>
     <body>
-        <nav>
+        <nav class="header-nav-list">
             <ul>
                 <li><a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
             </ul>
-            <img src="images/apps.png" alt="apps" class="apps-icon-small">
-            <img src="images/profile.png" alt="profile" class="profile-small">
+            <div>
+                <img src="images/apps.png" alt="apps" class="apps-icon-small">
+                <img src="images/profile.png" alt="profile" class="profile-small">
+            </div>
         </nav>
 
         <main>
@@ -111,13 +160,13 @@
         </main>
 
         <footer>
-            <ul>
+            <ul class="footer-nav">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Advertising</a></li>
                 <li><a href="#">Business</a></li>
                 <li><a href="#">How Search works</a></li>
             </ul>
-            <ul>
+            <ul class="footer-nav">
                 <li><a href="#">Privacy</a></li>
                 <li><a href="#">Terms</a></li>
                 <li><a href="#">Settings</a></li>

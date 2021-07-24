@@ -18,13 +18,71 @@
             }
 
             main {
-                min-width: 500px;
+                margin: auto;
+                text-align: center;
+                max-width: 600px;
             }
 
             .box {
                 background-color: red;
                 height: 100%;
                 width: 100%;
+            }
+
+
+            #search-form {
+                padding-top: 20px;
+            }
+            .search-box {
+                border: 1px solid #dfe1e5;
+                border-radius: 24px;
+                height: 32px;
+                padding: 5px 16px;
+                display: flex;
+
+                flex: 1 1 0%;
+                align-items: center;
+            }
+            #search {
+                padding: 0;
+                margin: 0;
+                border: none;
+                width: 100%;
+
+                outline: none;
+            }
+            .search-buttons-container {
+                margin-top: 16px;
+            }
+            .search-buttons {
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                margin: 11px 4px;
+                height: 36px;
+                padding: 0 16px;
+            }
+
+
+            .search-icon-small {
+                width: 20px;
+                height: 20px;
+                padding-right: 13px;
+            }
+            .apps-icon-small {
+                width: 24px;
+                height: 24px;
+            }
+            .profile-small {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+
+
+
+
+            ul li {
+                display: inline;
             }
         </style>
     </head>
@@ -34,16 +92,24 @@
                 <li><a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
             </ul>
+            <img src="images/apps.png" alt="apps" class="apps-icon-small">
+            <img src="images/profile.png" alt="profile" class="profile-small">
         </nav>
+
         <main>
             <img src="images/google_logo.png" alt="Google">
-            <form action="#">
-                <>
-                <input type="text">
-                <button>Google Search</button>
-                <button>I'm Feeling Lucky</button>
+            <form action="#" id="search-form">
+                <div class="search-box">
+                    <img src="images/search.png" class="search-icon-small">
+                    <input type="text" id="search">
+                </div>
+                <div class="search-buttons-container">
+                    <button class="search-buttons">Google Search</button>
+                    <button class="search-buttons">I'm Feeling Lucky</button>
+                </div>
             </form>
         </main>
+
         <footer>
             <ul>
                 <li><a href="#">About</a></li>

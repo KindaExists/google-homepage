@@ -25,6 +25,9 @@
             a {
                 text-decoration: none;
             }
+            a:hover {
+                text-decoration: underline;
+            }
 
 
 
@@ -38,8 +41,11 @@
             .header-nav-list ul li {
                 font-size: 13px;
             }
-            .header-nav-list ul li, .header-nav-list div {
+            .header-nav-list ul li, .header-nav-icons {
                 padding-left: 15px;
+            }
+            .header-nav-icons {
+                display: flex;
             }
             .header-nav-list ul li a {
                 color: rgba(0, 0, 0, 0.87);
@@ -48,19 +54,23 @@
 
 
             main {
-                height: 500px;
+                display: flex;
+                flex-direction: column;
+
+                height: calc(100vh - 560px);
                 width: 100%;
-            }
-            .main-container {
-                padding-top: auto;
-                margin: auto;
+
                 text-align: center;
+            }
+            .main-logo-container{
+                margin-top: auto;
+            }
+            #search-form {
+                margin: auto;
                 max-width: 600px;
+                padding-top: 30px;
             }
 
-            #search-form {
-                padding-top: 20px;
-            }
             .search-box {
                 border: 1px solid #dfe1e5;
                 border-radius: 24px;
@@ -71,11 +81,16 @@
                 flex: 1 1 0%;
                 align-items: center;
             }
+            .search-box:hover {
+                box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+                border-color: rgba(223, 225, 229, 0);
+            }
             #search {
                 padding: 0;
                 margin: 0;
                 border: none;
                 width: 100%;
+                height: 100%;
 
                 outline: none;
             }
@@ -85,9 +100,19 @@
             .search-buttons {
                 background-color: #f8f9fa;
                 border: 1px solid #f8f9fa;
+                border-radius: 5px;
+
                 margin: 11px 4px;
                 height: 36px;
                 padding: 0 16px;
+
+                cursor: pointer;
+            }
+            .search-buttons:hover {
+                border: 1px solid #dadce0;
+                background-color: #f8f9fa;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                color: #202124;
             }
 
 
@@ -132,15 +157,40 @@
             .apps-icon-small {
                 width: 24px;
                 height: 24px;
-                padding: 12px;
+                padding: 8px;
+            }
+            .apps {
+                padding: 4px;
+            }
+            .apps a {
+                display: block;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+            }
+            .apps a:hover {
+                background-color: rgba(60, 64, 67, 0.08)
+            }
+
+
+            .profile {
+                padding: 4px;
+            }
+            .profile a {
+                display: block;
+                height: 32px;
+                width: 32px;
+                padding: 4px;
+                border-radius: 50%;
+            }
+            .profile a:hover {
+                background-color: rgba(60, 64, 67, 0.08)
             }
             .profile-small {
                 width: 32px;
                 height: 32px;
-                padding: 8px;
                 border-radius: 50%;
             }
-
 
 
 
@@ -149,23 +199,29 @@
             }
         </style>
     </head>
+
     <body>
         <nav class="header-nav-list">
             <ul>
                 <li><a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
             </ul>
-            <div>
-                <img src="images/apps.png" alt="apps" class="apps-icon-small">
-                <img src="images/profile.png" alt="profile" class="profile-small">
+            <div class="header-nav-icons">
+                <div class="apps">
+                    <a href="#"><img src="images/apps.png" alt="apps" class="apps-icon-small"></a>
+                </div>
+                <div class="profile">
+                    <a href="#"><img src="images/profile.png" alt="profile" class="profile-small"></a>
+                </div>
             </div>
         </nav>
 
         <main>
-            <div class="main-container">
-                <div class="main-logo-container">
-                    <img src="images/google_logo.png" alt="Google">
-                </div>
+            <div class="main-logo-container">
+                <img src="images/google_logo.png" alt="Google">
+            </div>
+
+            <div>
                 <form action="#" id="search-form">
                     <div class="search-box">
                         <img src="images/search.png" class="search-icon-small">

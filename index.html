@@ -9,6 +9,10 @@
                 padding: 0;
                 margin: 0;
                 height: 100%;
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
             }
 
             body, input, button {
@@ -44,6 +48,11 @@
 
 
             main {
+                height: 500px;
+                width: 100%;
+            }
+            .main-container {
+                padding-top: auto;
                 margin: auto;
                 text-align: center;
                 max-width: 600px;
@@ -84,9 +93,14 @@
 
 
             footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%
+            }
+            .footer-container {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-evenly;
+                justify-content: space-between;
 
                 padding: 0 20px;
                 background-color: #f2f2f2
@@ -94,13 +108,15 @@
             .footer-nav {
                 display: flex;
                 flex-wrap: wrap;
-                margin: 0;
                 justify-content: space-evenly;
+
+                margin: 0;
+                padding: 0;
             }
-            footer ul li {
+            .footer-nav li {
                 padding: 15px;
             }
-            footer ul li a {
+            .footer-nav li a {
                 color: #70757a;
             }
 
@@ -146,31 +162,37 @@
         </nav>
 
         <main>
-            <img src="images/google_logo.png" alt="Google">
-            <form action="#" id="search-form">
-                <div class="search-box">
-                    <img src="images/search.png" class="search-icon-small">
-                    <input type="text" id="search">
+            <div class="main-container">
+                <div class="main-logo-container">
+                    <img src="images/google_logo.png" alt="Google">
                 </div>
-                <div class="search-buttons-container">
-                    <button class="search-buttons">Google Search</button>
-                    <button class="search-buttons">I'm Feeling Lucky</button>
-                </div>
-            </form>
+                <form action="#" id="search-form">
+                    <div class="search-box">
+                        <img src="images/search.png" class="search-icon-small">
+                        <input type="text" id="search">
+                    </div>
+                    <div class="search-buttons-container">
+                        <button class="search-buttons">Google Search</button>
+                        <button class="search-buttons">I'm Feeling Lucky</button>
+                    </div>
+                </form>
+            </div>
         </main>
 
         <footer>
-            <ul class="footer-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Advertising</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">How Search works</a></li>
-            </ul>
-            <ul class="footer-nav">
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
+            <div class="footer-container">
+                <ul class="footer-nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Advertising</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">How Search works</a></li>
+                </ul>
+                <ul class="footer-nav">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </div>
         </footer>
     </body>
 </html>
